@@ -14,7 +14,7 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 
 ### Todas as funcionalidades desta Api:
 
-#### Retornar todos os contatos:
+- #### Retornar todos os contatos:
 
 #### Url:
 - https://davidson-maytel.online/api/tcontatos
