@@ -16,12 +16,13 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 
 #### Retornar todos os contatos:
 
-- Url: https://davidson-maytel.online/api/tcontatos
+#### Url:
+- https://davidson-maytel.online/api/tcontatos
 
-- Metodo: Post
+#### Metodo:
+- Post
 
-- QueryParams:
-
--token='estagio'
+#### QueryParams:
+- token='estagio'
 
 
