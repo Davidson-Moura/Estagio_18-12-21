@@ -25,4 +25,42 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 #### QueryParams:
 - token='estagio'
 
+### Retornar um contato especifico:
 
+#### Url:
+- https://davidson-maytel.online/api/econtatos
+
+#### Metodo:
+- Post
+
+#### QueryParams:
+- token = 'estagio'
+- tipo = <int> de 1 a 4; 1 para id, 2 para nome, 3 para endereço e 4 para telefone
+- argumento = valor do tipo
+
+### Adciona um contato:
+
+#### Url:
+- https://davidson-maytel.online/api/addcontatos
+
+#### Metodo:
+- Post
+
+#### QueryParams:
+- token = 'estagio'
+- nome
+- endereco
+- telefone
+
+### Remove um contato:
+
+#### Url:
+- https://davidson-maytel.online/api/addcontatos
+
+#### Metodo:
+- Post
+
+#### QueryParams:
+- token = 'estagio'
+- tipo = <int> de 1 a 4; 1 para id, 2 para nome, 3 para endereço e 4 para telefone
+- argumento = valor do tipo
