@@ -12,9 +12,9 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 
 - Todas as requisições precisam do QueryParams token='estagio' no post.
 
-### Todas as funcionalidades desta Api:
+## Todas as funcionalidades desta Api:
 
-- #### Retornar todos os contatos:
+### Retornar todos os contatos:
 
 #### Url:
 - https://davidson-maytel.online/api/tcontatos
