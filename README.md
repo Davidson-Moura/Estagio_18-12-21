@@ -1,18 +1,20 @@
-#Este é um projeto para um estágio
+# Este é um projeto para um estágio
 
-##API
+## API
 
-###A API está em funcionamento no site https://davidson-maytel.online/api
+### A API está em funcionamento no site https://davidson-maytel.online/api
 
-####Exemplo de endereço de chamada da api para todos os contatos: https://davidson-maytel.online/api/tcontatos
+Exemplo de endereço de chamada da api para todos os contatos: https://davidson-maytel.online/api/tcontatos
 
-###Como Funciona as requisições:
+### Como Funciona as requisições:
 
-####Todas as requisições são do tipo post.
+-Todas as requisições são do tipo post.
 
-####Todas as requisições precisam do atributo token='estagio' no post.
+-Todas as requisições precisam do atributo token='estagio' no post.
 
-###Todas as funcionalidades desta Api:
+### Todas as funcionalidades desta Api:
 
-####Retornar todos os contatos:
+#### Retornar todos os contatos:
+
+-
 
