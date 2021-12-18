@@ -1,6 +1,6 @@
-# Este é um projeto para estágio
-
 ## API
+
+Escolhi o laravel para fazer a api, pois assim pude por no meu site para testes.
 
 ### A API está em funcionamento no site https://davidson-maytel.online/api
 
@@ -55,7 +55,7 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 ### Remove um contato:
 
 #### Url:
-- https://davidson-maytel.online/api/addcontatos
+- https://davidson-maytel.online/api/removecontato
 
 #### Metodo:
 - Post
