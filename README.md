@@ -25,6 +25,9 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 #### QueryParams:
 - token='estagio'
 
+#### Retorno
+- Formato json de todos os contatos
+
 ### Retornar um contato especifico:
 
 #### Url:
@@ -38,7 +41,10 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 - tipo = <int> de 1 a 4; 1 para id, 2 para nome, 3 para endereço e 4 para telefone
 - argumento = valor do tipo
 
-### Adciona um contato:
+#### Retorno
+- Formato json de um contato
+
+### Adiciona um contato:
 
 #### Url:
 - https://davidson-maytel.online/api/addcontatos
@@ -52,6 +58,10 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 - endereco
 - telefone
 
+#### Retorno
+- 1 para operação bem sucedida
+- 2 para operação mal sucedida
+
 ### Remove um contato:
 
 #### Url:
@@ -64,3 +74,7 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 - token = 'estagio'
 - tipo = <int> de 1 a 4; 1 para id, 2 para nome, 3 para endereço e 4 para telefone
 - argumento = valor do tipo
+
+#### Retorno
+- 1 para operação bem sucedida
+- 2 para operação mal sucedida
