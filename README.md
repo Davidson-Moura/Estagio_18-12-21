@@ -2,6 +2,17 @@
 
 ##API
 
-<div style="background:#ff8a80	rgb(255, 138, 128);">
-    <h3>Como Funciona a Api</h3>
-<div>
+###A API está em funcionamento no site https://davidson-maytel.online/api
+
+####Exemplo de endereço de chamada da api para todos os contatos: https://davidson-maytel.online/api/tcontatos
+
+###Como Funciona as requisições:
+
+####Todas as requisições são do tipo post.
+
+####Todas as requisições precisam do atributo token='estagio' no post.
+
+###Todas as funcionalidades desta Api:
+
+####Retornar todos os contatos:
+
