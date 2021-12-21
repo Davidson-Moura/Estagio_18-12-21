@@ -128,4 +128,14 @@ class ApiController extends Controller
             }
         }
     }
+    public function alteracontato(Request $request){
+        if($request->token == ApiController::$token){
+            try{
+                Contato::where('id','=',$request->id)->update(['nome' => $request->nome,'ende' => $request->endereco, 'tel' => $request->telefone]);
+                return 1;
+            }catch(Exception $e){
+                return 0;
+            }
+        }
+    }
 }

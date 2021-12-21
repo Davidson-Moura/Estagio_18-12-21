@@ -8,8 +8,6 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 
 ### Como Funciona as requisições:
 
-- Todas as requisições são do tipo post.
-
 - Todas as requisições precisam do QueryParams token='estagio' no post.
 
 ## Todas as funcionalidades desta Api:
@@ -20,7 +18,7 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 - https://davidson-maytel.online/api/tcontatos
 
 #### Metodo:
-- Post
+- GET
 
 #### QueryParams:
 - token='estagio'
@@ -34,7 +32,7 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 - https://davidson-maytel.online/api/econtatos
 
 #### Metodo:
-- Post
+- GET
 
 #### QueryParams:
 - token = 'estagio'
@@ -54,9 +52,9 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 
 #### QueryParams:
 - token = 'estagio'
-- nome
-- endereco
-- telefone
+- nome < string >
+- endereco < string >
+- telefone < string >
 
 #### Retorno
 - 1 para operação bem sucedida
@@ -68,12 +66,31 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 - https://davidson-maytel.online/api/removecontato
 
 #### Metodo:
-- Post
+- DELETE
 
 #### QueryParams:
 - token = 'estagio'
-- tipo = <int> de 1 a 4; 1 para id, 2 para nome, 3 para endereço e 4 para telefone
-- argumento = valor do tipo
+- tipo = < int > de 1 a 4; 1 para id, 2 para nome, 3 para endereço e 4 para telefone
+- argumento = valor do tipo < string >
+
+#### Retorno
+- 1 para operação bem sucedida
+- 2 para operação mal sucedida
+
+### Altera um contato:
+
+#### Url:
+- https://davidson-maytel.online/api/alteracontato
+
+#### Metodo:
+- PUT
+
+#### QueryParams:
+- token = 'estagio'
+- id 
+- nome < string >
+- endereco < string >
+- telefone < string >
 
 #### Retorno
 - 1 para operação bem sucedida

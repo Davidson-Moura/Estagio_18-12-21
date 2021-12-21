@@ -1,6 +1,7 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-], function (Controller) {
+	"sap/m/MessageToast",
+], function (Controller, MessageToast) {
 	"use strict";
 	return Controller.extend("estagio.controller.Alterar", {
 		onInit: function (oEvent) {
@@ -16,7 +17,7 @@ sap.ui.define([
             var that = this;
                         
             var aData = jQuery.ajax({
-                type : "POST",
+                type : "GET",
                 url : sUrl,
                 data:{token : "estagio",tipo : 1, argumento : id},
                 dataType : "json",                
@@ -26,7 +27,7 @@ sap.ui.define([
 						 id: data[0].id,
 						 tel: data[0].tel,
 						 ende: data[0].ende,
-						 data: data[0].created_at
+						 data: data[0].created_at.replace('T',' ')
 					});
             		that.getView().setModel(oViewModel,"view");
                   },
@@ -42,26 +43,51 @@ sap.ui.define([
             var that = this;
                         
             var aData = jQuery.ajax({
-                type : "POST",
+                type : "DELETE",
                 url : sUrl,
                 data:{token : "estagio",tipo : 1, argumento : id},
                 dataType : "json",                
                 success : function(data) {
+					MessageToast.show("Excluído com sucesso!");
 					setTimeout(function() {
 						window.location.href = "";
 					}, 2000);
                   },
                 error: function(data) {
+					MessageToast.show("Desculpe ocorreu um erro, contato Não foi excluído.");
                     console.log("Erro na chamada ajax. \n"+data);
                 }
             });
 		},
 
 		onPressSalvar: function(){
+			var id = this.getView().byId("id").mProperties.text;
 			var nome = this.getView().byId("nome").mProperties.value;
 			var tel = this.getView().byId("tel").mProperties.value;
 			var ende = this.getView().byId("ende").mProperties.value;
 			
+			var sUrl  = "https://www.davidson-maytel.online/api/alteracontato";
+            var that = this;
+                        
+            var aData = jQuery.ajax({
+                type : "PUT",
+                url : sUrl,
+                data:{token : "estagio", id : id, nome : nome, telefone : tel, endereco : ende},
+                dataType : "json",                
+                success : function(data) {
+					if(data){
+						MessageToast.show("Salvo com sucesso!");
+						setTimeout(function() {
+							window.location.href = "";
+						}, 2000);
+					}
+					
+                  },
+                error: function(data) {
+					MessageToast.show("Desculpe ocorreu um erro, contato Não foi excluído.");
+                    console.log("Erro na chamada ajax. \n"+data);
+                }
+            });
 		}
 
 	});

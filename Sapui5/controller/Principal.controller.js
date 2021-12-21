@@ -11,7 +11,7 @@ sap.ui.define([
             var that = this;
                         
             var aData = jQuery.ajax({
-                type : "POST",
+                type : "GET",
                 url : sUrl,
                 data:{token : "estagio"},
                 dataType : "json",                
@@ -36,6 +36,11 @@ sap.ui.define([
         onPressAdicionar: function(){
             var oRouter = this.getOwnerComponent().getRouter();
 			oRouter.navTo("adicionar");
+        },
+        irGit : function(){
+          let sMsg = "https://github.com/Davidson-Moura/Estagio_18-12-21";
+           window.open(sMsg,"_blank")
+           MessageToast.show("Estamos redirecionando para o Git");
         }
     });
  });

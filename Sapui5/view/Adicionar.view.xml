@@ -2,7 +2,7 @@
 	controllerName="estagio.controller.Adicionar"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
-	<Page title="{i18n>alterarPageTitle}">
+	<Page title="{i18n>addPageTitle}">
 		
 		<content>
 		

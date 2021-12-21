@@ -1,6 +1,7 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-], function (Controller) {
+    "sap/m/MessageToast",
+], function (Controller, MessageToast) {
 	"use strict";
 	return Controller.extend("estagio.controller.Adicionar", {
 		onPressAdicionar: function(){
@@ -16,9 +17,13 @@ sap.ui.define([
                 data:{token : "estagio",nome : nome, endereco : ende,telefone:tel},
                 dataType : "json",                
                 success : function(data) {
-					console.log("Bem sucedida");
+                    MessageToast.show("Adicionado com sucesso!");
+                    setTimeout(function() {
+						window.location.href = "";
+					}, 2000);
                   },
                 error: function(data) {
+                    MessageToast.show("Desculpe ocorreu um erro, contato Não foi adicionado.");
                     console.log("Erro na chamada ajax. \n"+data);
                 }
             });

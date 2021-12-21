@@ -16,7 +16,7 @@ sap.ui.define([
             var that = this;
                         
             var aData = jQuery.ajax({
-                type : "POST",
+                type : "GET",
                 url : sUrl,
                 data:{token : "estagio"},
                 dataType : "json",                

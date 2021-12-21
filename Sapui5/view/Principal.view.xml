@@ -19,6 +19,10 @@
             press=".onPressAdicionar"
             class="sapUiSmallMarginEnd"
             />
+         <Button
+				text="Acesse a documentação no GitHub"
+				icon="sap-icon://chain-link"
+				press=".irGit"/>
       </content>
    </Panel>
 </mvc:View>

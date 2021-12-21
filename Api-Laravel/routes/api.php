@@ -9,10 +9,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/tcontatos',[ApiController::class,'tcontatos']);
+Route::get('/tcontatos',[ApiController::class,'tcontatos']);
 
-Route::post('/econtatos',[ApiController::class,'econtatos']);
+Route::get('/econtatos',[ApiController::class,'econtatos']);
 
 Route::post('/addcontatos',[ApiController::class,'addcontatos']);
 
-Route::post('/removecontato',[ApiController::class,'removecontato']);
+Route::delete('/removecontato',[ApiController::class,'removecontato']);
+
+Route::put('/alteracontato',[ApiController::class,'alteracontato']);
