@@ -1,3 +1,7 @@
+# Todo o projeto está em funcionamento no meu site, porém com um pouco de delay
+
+## Link para o projeto no meu site https://www.davidson-maytel.online/estagio/
+
 ## API
 
 Escolhi o laravel para fazer a api, pois assim pude por no meu site para testes.
@@ -36,8 +40,8 @@ Exemplo de endereço de chamada da api para todos os contatos: https://davidson-
 
 #### QueryParams:
 - token = 'estagio'
-- tipo = <int> de 1 a 4; 1 para id, 2 para nome, 3 para endereço e 4 para telefone
-- argumento = valor do tipo
+- tipo = < int > de 1 a 4; 1 para id, 2 para nome, 3 para endereço e 4 para telefone
+- argumento = valor do tipo < string >
 
 #### Retorno
 - Formato json de um contato
