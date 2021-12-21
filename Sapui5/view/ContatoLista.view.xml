@@ -1,0 +1,45 @@
+<mvc:View
+   controllerName="estagio.controller.ContatoLista"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <Page title="{i18n>TContatos}">
+      <headerContent>
+			<Button
+            text="Meu Site"
+            icon="sap-icon://chain-link"
+            press=".irSite"/>
+		</headerContent>
+      <content>
+         <List
+            headerText="{i18n>Contatos}"
+            id="Lista"
+            class="sapUiResponsiveMargin"
+            width="auto"
+            items="{
+               path : '/contatos',
+               sorter : {
+                  path : 'contatos' 
+               }
+            }"
+         >
+            <headerToolbar>
+               <Toolbar>
+                  <Title text="{i18n>Contatos}"/>
+                  <ToolbarSpacer/>
+                  <SearchField width="50%" search=".onFilterInvoices"/>
+               </Toolbar>
+            </headerToolbar>
+            <items>
+               <ObjectListItem
+                  type="Navigation"
+                  press="onPress"
+                  title="Endereço: {ende}"
+                  intro="Nome: {nome}"
+                  number="Tel: {tel}"
+                  numberUnit="Id: {id}"
+               />
+            </items>
+         </List>
+      </content>
+   </Page>
+</mvc:View>

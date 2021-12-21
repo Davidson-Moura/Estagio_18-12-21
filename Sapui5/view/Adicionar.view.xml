@@ -1,0 +1,44 @@
+<mvc:View
+	controllerName="estagio.controller.Adicionar"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page title="{i18n>alterarPageTitle}">
+		
+		<content>
+		
+			<Text text="Nome: " class="sapUiResponsiveMargin"/>
+			<Input
+				id="nome"
+				value="{view>/nome}"
+				valueLiveUpdate="true"
+				width="85%"/>
+
+			<Text text="Telefone: " class="sapUiResponsiveMargin"/>
+			<Input
+				id="tel"
+				value="{view>/tel}"
+				valueLiveUpdate="true"
+				width="85%"/>
+
+			<Text text="Endereço: " class="sapUiResponsiveMargin"/>
+			<Input
+				id="ende"
+				value="{view>/ende}"
+				valueLiveUpdate="true"
+				width="85%"/>
+
+			<Button
+				press="onPressAdicionar"
+				class="sapUiResponsiveMargin"
+				text="Adicionar Contato"
+				width=""
+			></Button>
+		</content>
+
+		<ObjectHeader
+			responsive="true"
+			fullScreenOptimized="true">
+		</ObjectHeader>
+			
+	</Page>
+</mvc:View>

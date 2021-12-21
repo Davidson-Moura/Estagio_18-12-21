@@ -1,45 +1,96 @@
 {
 	"_version": "1.12.0",
 	"sap.app": {
-	  "id": "estagio",
-	  "type": "application",
-	  "i18n": "i18n/i18n.properties",
-	  "title": "{{appTitle}}",
-	  "description": "{{appDescription}}",
-	  "applicationVersion": {
-		"version": "1.0.0"
-	  }
+		"id": "estagio",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
 	},
 	"sap.ui": {
-	  "technology": "UI5",
-	  "deviceTypes": {
-		  "desktop": true,
-		  "tablet": true,
-		  "phone": true
-	  }
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
 	},
 	"sap.ui5": {
-	  "rootView": {
-		  "viewName": "estagio.view.App",
-		  "type": "XML",
-		  "id": "app"
-	  },
-	  "dependencies": {
-		"minUI5Version": "1.93",
+		"rootView": {
+			"viewName": "estagio.view.App",
+			"type": "XML",
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.93",
 			"libs": {
 				"sap.ui.core": {},
 				"sap.m": {}
 			}
-	  },
-	  "models": {
-		"i18n": {
-		  "type": "sap.ui.model.resource.ResourceModel",
-		  "settings": {
-			"bundleName": "estagio.i18n.i18n",
-			"supportedLocales": [""],
-			"fallbackLocale": ""
-		  }
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "estagio.i18n.i18n",
+					"supportedLocales": [
+						""
+					],
+					"fallbackLocale": ""
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "estagio.view",
+				"controlId": "app",
+				"controlAggregation": "pages"
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "overview",
+					"target": "overview"
+				},
+				{
+					"pattern": "alterar/{contatosPath}",
+					"name": "alterar",
+					"target": "alterar"
+				},
+				{
+					"pattern": "todoscontatos",
+					"name": "todoscontatos",
+					"target": "todoscontatos"
+				},
+				{
+					"pattern": "adicionar",
+					"name": "adicionar",
+					"target": "adicionar"
+				}
+			],
+			"targets": {
+				"overview": {
+					"viewId": "overview",
+					"viewName": "Overview"
+				},
+				"alterar": {
+					"viewId": "alterar",
+					"viewName": "Alterar"
+				},
+				"todoscontatos": {
+					"viewId": "todoscontatos",
+					"viewName": "ContatoLista"
+				},
+				"adicionar": {
+					"viewId": "adicionar",
+					"viewName": "Adicionar"
+				}
+			}
 		}
-	  }
 	}
-  }
+}

@@ -4,13 +4,10 @@ sap.ui.define([
  ], function (Controller, MessageToast) {
     "use strict";
     return Controller.extend("estagio.controller.App", {
-       onAlerta : function () {
-          // read msg from i18n model
-          var oBundle = this.getView().getModel("i18n").getResourceBundle();
-          var sRecipient = this.getView().getModel().getProperty("/recipient/name");
-          var sMsg = oBundle.getText("helloMsg", [sRecipient]);
-          // show message
-          MessageToast.show(sMsg);
+      irSite : function () {
+          let sMsg = "https://www.davidson-maytel.online/";
+          window.open(sMsg,"_blank")
+          MessageToast.show("Estamos redirecionando para meu site");
        }
     });
  });

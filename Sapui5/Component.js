@@ -10,22 +10,40 @@ sap.ui.define([
          manifest: "json"
       },
        init : function () {
-          // call the init function of the parent
           UIComponent.prototype.init.apply(this, arguments);
-          // set data model
-          var oData = {
-             recipient : {
-                name : "World"
-             }
-          };
-          var oModel = new JSONModel(oData);
-          this.setModel(oModel);
+         
+          var sUrl  = "https://www.davidson-maytel.online/api/tcontatos";
+            var that = this;
+                        
+            var aData = jQuery.ajax({
+                type : "POST",
+                url : sUrl,
+                data:{token : "estagio"},
+                dataType : "json",                
+                success : function(data) {         
+                    var oData = {
+                     contatos : data
+                     }
+                     var oModel = new JSONModel(oData);
+                     that.setModel(oModel);
+         
+                  },
+                error: function(data) {                
+                    console.log("Erro na chamada ajax. \n"+data);
+                }
+            });
+
+         
+
+          
  
           // set i18n model
           var i18nModel = new ResourceModel({
              bundleName: "estagio.i18n.i18n"
           });
           this.setModel(i18nModel, "i18n");
+
+          this.getRouter().initialize();
        }
     });
  });

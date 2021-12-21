@@ -1,0 +1,60 @@
+<mvc:View
+	controllerName="estagio.controller.Alterar"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page title="{i18n>alterarPageTitle}">
+		
+		<content>
+		
+			<Text text="Nome: " class="sapUiResponsiveMargin"/>
+			<Input
+				id="nome"
+				value="{view>/nome}"
+				description="Nome Atual"
+				valueLiveUpdate="true"
+				width="90%"/>
+
+			<Text text="Telefone: " class="sapUiResponsiveMargin"/>
+			<Input
+				id="tel"
+				value="{view>/tel}"
+				description="Telefone Atual"
+				valueLiveUpdate="true"
+				width="85%"/>
+
+			<Text text="Endereço: " class="sapUiResponsiveMargin"/>
+			<Input
+				id="ende"
+				value="{view>/ende}"
+				description="Endereço Atual"
+				valueLiveUpdate="true"
+				width="85%"/>
+
+			<Button
+				press="onPressSalvar"
+				class="sapUiResponsiveMargin"
+				text="Salvar alterações"
+				width=""
+			></Button>
+
+			<Button
+                press="onPressExcluir"
+				class="sapUiResponsiveMargin"
+				text="Excluir Contato"
+				width=""
+			></Button>
+		</content>
+
+		<ObjectHeader
+		
+			responsive="true"
+			fullScreenOptimized="true"
+		>
+			<attributes>
+				<ObjectAttribute id="id" title="Id" text="{view>/id}"/>
+				<ObjectAttribute title="{i18n>dateTitle}" text="{view>/data}"/>
+			</attributes>
+		</ObjectHeader>
+			
+	</Page>
+</mvc:View>
