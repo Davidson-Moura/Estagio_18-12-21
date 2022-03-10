@@ -1,7 +1,7 @@
-sap.ui.define([
+sap.ui.define([ // RESPOSTA (nome=define, propriedade=função , tempo=Design)
 	"sap/ui/core/mvc/Controller",
-	"sap/m/MessageToast",
-], function (Controller, MessageToast) {
+	"sap/m/MessageToast", // RESPOSTA (nome=Sem nome, propriedade=Array , tempo=carregamento) -> Pois trás funções de outros arquivos 
+], function (Controller, MessageToast) { // RESPOSTA (nome=Sem nome, propriedade=função , tempo=carregamento)
 	"use strict";
 	return Controller.extend("estagio.controller.Alterar", {
 		onInit: function (oEvent) {
@@ -13,7 +13,7 @@ sap.ui.define([
 			var oRouter = this.getOwnerComponent().getRouter();
 			var id= oRouter.oHashChanger.hash.replace("alterar/",'');//Peguei o id do contato
 
-			var sUrl  = "https://www.davidson-maytel.online/api/econtatos";
+			var sUrl  = "https://www.davidson-maytel.online/api/econtatos"; // RESPOSTA (nome=sUrl, propriedade=String , tempo=execução)
             var that = this;
                         
             var aData = jQuery.ajax({
@@ -61,7 +61,7 @@ sap.ui.define([
 		},
 
 		onPressSalvar: function(){
-			var id = this.getView().byId("id").mProperties.text;
+			var id = this.getView().byId("id").mProperties.text; // RESPOSTA (nome=id, propriedade=Int , tempo=execução)
 			var nome = this.getView().byId("nome").mProperties.value;
 			var tel = this.getView().byId("tel").mProperties.value;
 			var ende = this.getView().byId("ende").mProperties.value;
